@@ -5,8 +5,8 @@ import Sidebar from './components/Sidebar';
 import Landing from './pages/Landing';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
-import Notifications from './Pages/Notifications';
-import Settings from './Pages/Settings';
+import Notifications from './pages/Notifications';
+import Settings from './pages/Settings';
 
 const PUBLISHABLE_KEY = "pk_test_aHVnZS1sbGFtYS02NS5jbGVyay5hY2NvdW50cy5kZXYk";
 

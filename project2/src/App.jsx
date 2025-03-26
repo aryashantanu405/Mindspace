@@ -8,7 +8,7 @@ import Profile from './pages/Profile';
 import Notifications from './pages/Notifications';
 import Settings from './pages/Settings';
 
-const PUBLISHABLE_KEY = "pk_test_aHVnZS1sbGFtYS02NS5jbGVyay5hY2NvdW50cy5kZXYk";
+const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
 function PrivateRoute({ children }) {
   const { isSignedIn, isLoaded } = useUser();

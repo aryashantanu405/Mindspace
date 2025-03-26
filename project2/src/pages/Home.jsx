@@ -42,15 +42,15 @@ function Home() {
               <div className="grid grid-cols-3 gap-4 ">
                 <button className="flex flex-col items-center justify-center lg:p-1 bg-white/5 rounded-xl hover:bg-white/10 transition-all hover:scale-105 group">
                   <span className="text-4xl lg:text-7xl  mb-2">😊</span>
-                  <span className="text-white text-sm group-hover:text-purple-300">Happy</span>
+                  <span className="text-white text-sm hidden lg:block group-hover:text-purple-300">Happy</span>
                 </button>
                 <button className="flex flex-col items-center justify-center p-1 bg-white/5 rounded-xl hover:bg-white/10 transition-all hover:scale-105 group">
                   <span className="text-4xl lg:text-7xl  mb-2">😌</span>
-                  <span className="text-white text-sm group-hover:text-purple-300">Peaceful</span>
+                  <span className="text-white text-sm hidden lg:block group-hover:text-purple-300">Peaceful</span>
                 </button>
                 <button className="flex flex-col items-center justify-center p-1 bg-white/5 rounded-xl hover:bg-white/10 transition-all hover:scale-105 group">
                   <span className="text-4xl lg:text-7xl  mb-2">😇</span>
-                  <span className="text-white text-sm group-hover:text-purple-300">Blessed</span>
+                  <span className="text-white text-sm hidden lg:block group-hover:text-purple-300">Blessed</span>
                 </button>
                 
               </div>
@@ -58,15 +58,15 @@ function Home() {
               <div className="grid grid-cols-3 gap-4">
                 <button className="flex flex-col items-center justify-center p-1 bg-white/5 rounded-xl hover:bg-white/10 transition-all hover:scale-105 group">
                   <span className="text-4xl lg:text-7xl  mb-2">😭</span>
-                  <span className="text-white text-sm group-hover:text-purple-300">Crying</span>
+                  <span className="text-white text-sm hidden lg:block group-hover:text-purple-300">Crying</span>
                 </button>
                 <button className="flex flex-col items-center justify-center p-1 bg-white/5 rounded-xl hover:bg-white/10 transition-all hover:scale-105 group">
                   <span className="text-4xl lg:text-7xl  mb-2">😰</span>
-                  <span className="text-white text-sm group-hover:text-purple-300">Stressed</span>
+                  <span className="text-white text-sm hidden lg:block group-hover:text-purple-300">Stressed</span>
                 </button>
                 <button className="flex flex-col items-center justify-center p-1 bg-white/5 rounded-xl hover:bg-white/10 transition-all hover:scale-105 group">
                   <span className="text-4xl lg:text-7xl  mb-2">😔</span>
-                  <span className="text-white text-sm group-hover:text-purple-300">Depressed</span>
+                  <span className="text-white text-sm hidden lg:block group-hover:text-purple-300">Depressed</span>
                 </button>
               </div>
             </div>
@@ -76,7 +76,7 @@ function Home() {
         {/* Second Row */}
         <div className="flex flex-col md:flex-row gap-6">
           <div className="w-full md:w-2/3 bg-white backdrop-blur-sm rounded-xl overflow-hidden flex justify-center items-center">
-          <BarChart
+          <BarChart 
       series={[
         { data: [5, 14, 8, 17] },
         { data: [25, 16, 22, 13] },
@@ -85,26 +85,26 @@ function Home() {
       ]}
       height={290}
       xAxis={[{ data: ['week 1', 'week 2', ' week 3', 'week4'], scaleType: 'band' }]}
-      margin={{ top: 10, bottom: 30, left: 40, right: 10 }}
+      margin={{ top: 20, bottom: 30, left: 40, right: 10 }}
     />
           </div>
-          <div className="w-full md:w-1/3 aspect-square bg-white backdrop-blur-sm rounded-xl overflow-hidden flex flex-col p-2 items-center lg:gap-6 gap-1" >
+          <div className="w-full md:w-1/3 aspect-square bg-white backdrop-blur-sm rounded-xl overflow-hidden flex flex-col p-2 items-center lg:gap-6 gap-1 " >
           <h1 className="text-xl font-semibold mt-4 lg:text-4xl">Need a consultation?</h1>
-          <div className="flex flex-col justify-between gap-3 mt-2 lg:w-4/5">
+          <div className="flex flex-col justify-between gap-1 lg:gap-3 mt-2 lg:w-4/5">
              <div className="flex justify-between text-center gap-2 bg-sky-100 p-2 rounded-lg ">
               <img src={pic} className="w-14 lg:w-32 rounded-full" alt="" />
-              <h2 className="lg:text-3xl">Richa Cocaine <br /><span className="font-light">Phsyciatrist</span> <span className="hidden lg:block text-2xl font-thin">
+              <h2 className="text-sm lg:text-3xl">Richa Cocaine <br /><span className="font-light">Phsyciatrist</span> <span className="hidden lg:block text-2xl font-thin">
                 MBBS,NIT PATNA</span></h2>
               <button className=" rounded-full text-lg lg:text-4xl">💬</button>
              </div>
              <div className="flex justify-between text-center gap-2 bg-sky-100 p-2 rounded-lg ">
               <img src={pic} className="w-14 lg:w-32 rounded-full" alt="" />
-              <h2 className="lg:text-3xl">Richa Cocaine <br /><span className="font-light">Phsyciatrist</span> <span className="hidden lg:block text-2xl font-thin">
+              <h2 className="text-sm lg:text-3xl">Richa Cocaine <br /><span className="font-light">Phsyciatrist</span> <span className="hidden lg:block text-2xl font-thin">
                 MBBS,NIT PATNA</span></h2>
               <button className=" rounded-full text-lg lg:text-4xl">💬</button>
              </div>
           </div>
-          <button className="bg-blue-500 text-white px-4 py-1 text-lg rounded-xl mt-5 lg:text-3xl">
+          <button className="bg-blue-500 text-white px-4 py-1 text-lg rounded-xl mt-5 lg:text-3xl hover:scale-105">
             more
           </button>
           </div>
@@ -114,36 +114,36 @@ function Home() {
         <div className="w-full bg-white/10 backdrop-blur-sm rounded-xl p-8">
           <div className="flex flex-col sm:flex-row items-center justify-between mb-6 gap-4">
             <h2 className="text-2xl font-bold text-white">You are on right platform!</h2>
-            <button className="px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors">
+            {/* <button className="px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors">
               View All
-            </button>
+            </button> */}
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             <div className="bg-white rounded-lg p-4">
              <div className="flex justify-start items-center gap-6 p-4">
               <img className="w-14 rounded-full" src={pic} alt="" />
-              <h2 className="text-xl font-semibold">"Killing depression everyday"</h2>
+              <h2 className="text-sm md:text-md lg:text-xl font-semibold">"Killing depression everyday"</h2>
              </div>
              <div className="p-4 font-serif">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, esse molestiae nobis quas corrupti repellendus temporibus perspiciatis aperiam placeat nisi omnis explicabo laudantium blanditiis magni soluta expedita, accusamus enim iusto.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, esse molestiae nobis quas corrupti repellendus temporibus .
              </div>
             </div>
             <div className="bg-white rounded-lg p-4">
              <div className="flex justify-start items-center gap-6 p-4">
               <img className="w-14 rounded-full" src={pic} alt="" />
-              <h2 className="text-xl font-semibold">"Killing depression everyday"</h2>
+              <h2 className="text-sm  md:text-md lg:text-xl font-semibold">"Killing depression everyday"</h2>
              </div>
              <div className="p-4 font-serif">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, esse molestiae nobis quas corrupti repellendus temporibus perspiciatis aperiam placeat nisi omnis explicabo laudantium blanditiis magni soluta expedita, accusamus enim iusto.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, esse molestiae nobis quas corrupti repellendus temporibus .
              </div>
             </div>
             <div className="bg-white rounded-lg p-4">
              <div className="flex justify-start items-center gap-6 p-4">
               <img className="w-14 rounded-full" src={pic} alt="" />
-              <h2 className="text-xl font-semibold">"Killing depression everyday"</h2>
+              <h2 className="text-sm md:text-md lg:text-xl font-semibold">"Killing depression everyday"</h2>
              </div>
              <div className="p-4 font-serif">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, esse molestiae nobis quas corrupti repellendus temporibus perspiciatis aperiam placeat nisi omnis explicabo laudantium blanditiis magni soluta expedita, accusamus enim iusto.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, esse molestiae nobis quas corrupti repellendus temporibus .
              </div>
             </div>
           </div>

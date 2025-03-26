@@ -9,7 +9,6 @@ import Notifications from './pages/Notifications';
 import Settings from './pages/Settings';
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
-
 function PrivateRoute({ children }) {
   const { isSignedIn, isLoaded } = useUser();
 
@@ -72,9 +71,9 @@ function App() {
           } />
           <Route path="/dashboard/*" element={
             <PrivateRoute>
-              <div className="flex min-h-screen bg-gradient-to-br from-gray-900 to-gray-800">
+              <div className=" flex min-h-screen bg-gradient-to-br from-gray-900 to-gray-800">
                 <Sidebar />
-                <main className="flex-1 ml-20">
+                <main className="flex-1 justify-center ml-10">
                   <Routes>
                     <Route index element={<Home />} />
                     <Route path="profile" element={<Profile />} />

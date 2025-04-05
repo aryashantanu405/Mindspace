@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import { ArrowRight, Brain, Heart, Shield } from "lucide-react";
 
 function Landing() {
+  const [data, setData] = useState([]);
+
+  // useEffect(() => {
+  //   // Fetch data from backend (Express server)
+  //   fetch('http://localhost:5000/')  // Make sure the port matches your backend
+  //     .then(response => response.json())
+  //     .then(data => setData(data))   // Set the received array to state
+  //     .catch(error => console.log('Error fetching data: ', error));
+  // }, []);
+
+console.log(data);
   const navigate = useNavigate();
 
+
   return (
+    
     <div className="min-h-screen bg-gradient-to-b from-bgcolor1 to-bgcolor2">
       <nav className="top-0 left-0 flex justify-between items-center px-2 pt-2 -mb-10">
         

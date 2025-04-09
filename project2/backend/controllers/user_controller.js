@@ -203,33 +203,33 @@ export const getFeelings = async function (req, res) {
 };
 
 //To be removed.....
-export const createUser = async (req, res) => {
-  try {
-    const { email, username } = req.body;
+// export const createUser = async (req, res) => {
+//   try {
+//     const { email, username } = req.body;
 
-    if (!email || !username) {
-      return res.status(400).send({
-        success: false,
-        message: "Email and username are required",
-      });
-    }
+//     if (!email || !username) {
+//       return res.status(400).send({
+//         success: false,
+//         message: "Email and username are required",
+//       });
+//     }
 
-    const newUser = await userModel.create({
-      email,
-      username,
-      created_at: new Date(),  // optional
-      last_sign_at: new Date(), // optional
-    });
+//     const newUser = await userModel.create({
+//       email,
+//       username,
+//       created_at: new Date(),  // optional
+//       last_sign_at: new Date(), // optional
+//     });
 
-    res.status(201).send({
-      success: true,
-      message: "User created successfully",
-      user: newUser,
-    });
-  } catch (err) {
-    res.status(500).send({
-      success: false,
-      message: err.message,
-    });
-  }
-};
+//     res.status(201).send({
+//       success: true,
+//       message: "User created successfully",
+//       user: newUser,
+//     });
+//   } catch (err) {
+//     res.status(500).send({
+//       success: false,
+//       message: err.message,
+//     });
+//   }
+// };

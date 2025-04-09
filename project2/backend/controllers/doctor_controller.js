@@ -110,48 +110,48 @@ export const getStats = async function (req, res) {
 
 export const getConversations = fetchConversations;
 
-export const createDoctor = async (req, res) => {
-  try {
-    const { username, email, password, fullname } = req.body;
+// export const createDoctor = async (req, res) => {
+//   try {
+//     const { username, email, password, fullname } = req.body;
 
-    // Basic validation
-    if (!username || !email || !password || !fullname) {
-      return res.status(400).send({
-        success: false,
-        message: "Username, email, and password are required.",
-      });
-    }
+//     // Basic validation
+//     if (!username || !email || !password || !fullname) {
+//       return res.status(400).send({
+//         success: false,
+//         message: "Username, email, and password are required.",
+//       });
+//     }
 
-    // Optional: Check for existing doctor with same email or username
-    const existingDoctor = await doctorModel.findOne({ $or: [{ email }, { username }] });
-    if (existingDoctor) {
-      return res.status(409).send({
-        success: false,
-        message: "Doctor with this email or username already exists.",
-      });
-    }
+//     // Optional: Check for existing doctor with same email or username
+//     const existingDoctor = await doctorModel.findOne({ $or: [{ email }, { username }] });
+//     if (existingDoctor) {
+//       return res.status(409).send({
+//         success: false,
+//         message: "Doctor with this email or username already exists.",
+//       });
+//     }
 
-    // Create doctor
-    const newDoctor = await doctorModel.create({
-      username,
-      email,
-      fullname,
-      password,
-    });
+//     // Create doctor
+//     const newDoctor = await doctorModel.create({
+//       username,
+//       email,
+//       fullname,
+//       password,
+//     });
 
-    res.status(201).send({
-      success: true,
-      message: "Doctor created successfully.",
-      doctor: newDoctor,
-    });
+//     res.status(201).send({
+//       success: true,
+//       message: "Doctor created successfully.",
+//       doctor: newDoctor,
+//     });
 
-  } catch (error) {
-    res.status(500).send({
-      success: false,
-      message: error.message,
-    });
-  }
-};
+//   } catch (error) {
+//     res.status(500).send({
+//       success: false,
+//       message: error.message,
+//     });
+//   }
+// };
 
 
 

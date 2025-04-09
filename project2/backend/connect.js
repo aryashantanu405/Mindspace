@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-const MONGO_URI = 'mongodb+srv://trinetrakumar7250:gxRrA9lCxv7VPhl6@firstcluster.wtrrtvq.mongodb.net/?retryWrites=true&w=majority&appName=FirstCluster';
+const MONGO_URI = 'mongodb+srv://trinetrakumar725fthg0:<Your Password>@firstcluster.wtrrtvq.mongodb.net/?retryWrites=true&w=majority&appName=FirstCluster';
 
 
 

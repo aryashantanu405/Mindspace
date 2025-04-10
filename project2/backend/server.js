@@ -4,10 +4,16 @@ import cors from 'cors';
 app.use(cors());
 import connectDB from './connect.js';
 connectDB();
-import TestData from './models/testdata.js';
-import mooddata from './models/moodscore.js';
-import User_Data from './models/user.model.js';
-app.use(express.json());  // to parse JSON requests
+import TestData from './models/testdata_model.js';
+import mooddata from './models/moodscore_model.js';
+import User_Data from './models/user_model.js';
+import doctorRouter from "./routes/doctor_router.js";
+import userRouter from "./routes/user_router.js";
+app.use(express.json());
+app.use("/doctor", doctorRouter);
+app.use("/user", userRouter);
+
+  // to parse JSON requests
 let num=0;
 let moodscore=0;
 app.get('/dashboard/moodscore',async (req,res)=>{

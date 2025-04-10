@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-const MONGO_URI = 'mongodb://localhost:27017/Mindspace';
+const MONGO_URI = 'mongodb+srv://trinetrakumar725fthg0:<Your Password>@firstcluster.wtrrtvq.mongodb.net/?retryWrites=true&w=majority&appName=FirstCluster';
 
 
 
